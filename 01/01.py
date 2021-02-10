@@ -30,9 +30,9 @@ time_pass = '{years} years, {months} months, {days} days, {hours} hours, {minute
     years = utc_time_duration.year - 1970,
     months = utc_time_duration.month - 1,
     days = utc_time_duration.day - 1,
-    hours=utc_time_duration.hour,
-    minutes=utc_time_duration.minute,
-    seconds=utc_time_duration.second,
+    hours = utc_time_duration.hour,
+    minutes = utc_time_duration.minute,
+    seconds = utc_time_duration.second,
 )
 
 utc_time = datetime.utcfromtimestamp(time() + duration)
