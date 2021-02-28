@@ -15,7 +15,7 @@
 "два"
 """
 
-NUMBER_RU = [
+NUMBER_RU = (
     'ноль',
     'один',
     'два',
@@ -27,9 +27,9 @@ NUMBER_RU = [
     'восемь',
     'девять',
     'десять',
-]
+)
 
-NUMBER_EN = [
+NUMBER_EN = (
     'zero',
     'one',
     'two',
@@ -41,7 +41,7 @@ NUMBER_EN = [
     'eight',
     'nine',
     'ten',
-]
+)
 
 def num_translate_adv(number_str: str) -> str:
     """
