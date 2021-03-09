@@ -18,12 +18,13 @@ directory = '.'
 
 stat = defaultdict(lambda : {'count': 0, 'files_extensions': set()})
 
-for entry in scandir(directory):
-    if entry.is_file():
-        index = 10 ** len(str(entry.stat().st_size))
-        ext = entry.name[entry.name.find('.') + 1:]
-        stat[index]['count'] += 1
-        stat[index]['files_extensions'].add(ext)
+with scandir(directory) as dir_gen:
+    for entry in dir_gen:
+        if entry.is_file():
+            index = 10 ** len(str(entry.stat().st_size))
+            ext = entry.name[entry.name.find('.') + 1:]
+            stat[index]['count'] += 1
+            stat[index]['files_extensions'].add(ext)
 
 
 print(dict(stat))
